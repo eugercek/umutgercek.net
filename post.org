@@ -1,0 +1,122 @@
+#+hugo_front_matter_format: yaml
+#+HUGO_BASE_DIR: ./
+#+EXPORTS both
+#+hugo_auto_set_lastmod: t
+#+SEQ_TODO: TODO DRAFT DONE
+#+hugo_section: post
+
+#+author:
+
+* Emacs :@emacs:
+* Advanced C Programming Series :C:
+** tlpi :@tlpi:linux:
+*** TODO 0 Advanced C Programming - Introduction
+# :PROPERTIES:
+# :EXPORT_FILE_NAME: 00-advance-C
+# :EXPORT_FILE_DATE: 2021-02-2
+# :END:
+**** Auidence
+While I was learning C  I couldn't find *semi-* advance tutorial on internet.\\
+Everything is just too easy or too hard for me.\\
+
+Nowadays I'm reading [[https://www.amazon.com/Linux-Programming-Interface-System-Handbook/dp/1593272200][The Linux Programming Interface]].\\
+So I study between between the territory OS internals and C.\\
+There were lots of times that I said this is fun I should have learned this way before.\\
+This series is for these moments.\\
+It's primary focus will be C not OS.\\
+
+Most of code i for *nix.
+**** I don't know C
+I didn't use C a lot. Evenmore I don't know systems programming a lot.
+*** DRAFT 1 Advanced C Programming - errno
+:PROPERTIES:
+:EXPORT_FILE_NAME: 01-advance-C
+:END:
+=errno= is a integer global variable declared in =<errno.h>=.
+- It's default value is 0.
+- When a error happened, Library function or system call sets =errno= a non-zero value.
+- We can look =errno= to identify what was the error.
+
+**** What is system call
+#+begin_quote
+
+ No one can use anything in OS.<br>
+ Only kernel allowed to interact with hardware.<br>
+ If anything happened it could happend thanks to kernel.<br>
+
+#+end_quote
+
+Beside being funny, I tried to summarize what's kernel's job.
+System call is kernel's interfaces, APIs.
+
+***** For example.
+
+When a program allocated memory, it actually asks kernel to allocate memory.
+
+When we say process creted new process ...<br>
+I think it's obvious.
+
+***** Wrapper Functions
+Generally system calls wrapped around a function for friendlier interface.
+
+| Function    | System call |
+|-------------+-------------|
+| fopen       | open        |
+| printf      | write       |
+| malloc,free | brk         |
+**** Exception check
+In C you need to check nearly every sytem call.\\
+File operations, memory allocations.\\
+You will get really interesting erros if you won't.\\
+
+#+BEGIN_SRC C
+ FILE *ftpr = fopen("foo.txt", "r");
+ if (fptr == NULL)
+   printf("I hate writing error messages");
+#+END_SRC
+
+With =errno= you can have better interface for deaing with errors
+**** perror()
+Defined in =<stdio.h>=.
+Does something like this =function_error_map[errno]=.
+#+BEGIN_SRC C :includes '(<stdio.h> <fcntl.h> <errno.h>) :exports both :hlines 1
+ FILE *ftpr = fopen("foo.txt", "r");
+ if (errno != 0)
+   perror("open");
+#+END_SRC
+
+#+RESULTS:
+open: No such file or directory
+**** Explore open error messages
+We can use =strerror()= which defined in =<string.h>=.
+It returns =char *=.
+133 is generaly maximum error number.
+#+BEGIN_SRC C :includes '(<stdio.h> <string.h> <errno.h>) :exports both :colnames '("No" "Message")
+ for (int i = 0; i < 10; i++) {
+   printf("%d\t%s\n", i, strerror(i));
+ }
+#+END_SRC
+
+#+RESULTS:
+| No | Message                   |
+|----+---------------------------|
+|  0 | Success                   |
+|  1 | Operation not permitted   |
+|  2 | No such file or directory |
+|  3 | No such process           |
+|  4 | Interrupted system call   |
+|  5 | Input/output error        |
+|  6 | No such device or address |
+|  7 | Argument list too long    |
+|  8 | Exec format error         |
+|  9 | Bad file descriptor       |
+*** getopt()
+:PROPERTIES:
+:EXPORT_FILE_NAME: getopt
+:END:
+If getopt() finds option character it returns it.
+When no more character getopt() returns -1.
+| optind | index of next option |
+
+* GNU/Linux Tools
+** Makefile Series
