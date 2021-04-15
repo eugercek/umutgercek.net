@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on My Blog</title>
+    <link>http://umutgercek.net/tags/linux/</link>
+    <description>Recent content in linux on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 02 Feb 2021 07:59:55 +0300</lastBuildDate>
+    
+	<atom:link href="http://umutgercek.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0 Advanced C Programming - Introduction</title>
+      <link>http://umutgercek.net/post/00-advance-c/</link>
+      <pubDate>Tue, 02 Feb 2021 07:59:55 +0300</pubDate>
+      
+      <guid>http://umutgercek.net/post/00-advance-c/</guid>
+      <description>How much advanced content can come from novice programmer While I was learning C I couldn&amp;rsquo;t find *semi-*advance tutorial on internet.</description>
+    </item>
+    
+    <item>
+      <title>1 Advanced C Programming - errno</title>
+      <link>http://umutgercek.net/post/01-advance-c/</link>
+      <pubDate>Tue, 02 Feb 2021 07:20:00 +0300</pubDate>
+      
+      <guid>http://umutgercek.net/post/01-advance-c/</guid>
+      <description>Manual of errno is pretty good.</description>
+    </item>
+    
+  </channel>
+</rss>

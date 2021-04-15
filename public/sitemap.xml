@@ -1,0 +1,73 @@
+<?xml-stylesheet type="text/xsl" href="http://umutgercek.net/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://umutgercek.net/post/00-advance-c/</loc>
+    <lastmod>2021-02-02T07:59:55+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/tags/c/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/categories/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/tags/linux/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/post/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/tags/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/categories/tlpi/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/post/01-advance-c/</loc>
+    <lastmod>2021-02-02T07:59:56+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://umutgercek.net/about/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
